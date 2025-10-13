@@ -54,29 +54,29 @@ cd weather-app-hacktoberfest2025
 npm install
 
 ```
-
-3. **Start the development server**
-
-```bash
-
-npm start
-
-```
-
----
-
-## 🔑 Environment Setup
-
-Create a file called `.env` in the root directory and add your OpenWeatherMap API key:
+3. **Set up Environment variables**
 
 ```env
 
+cp .env.example .env
+
+```
+OR 
+- Create a file called .env in the root directory and add your OpenWeatherMap API key:
+```env
 
 REACT_APP_WEATHER_API_KEY=your_api_key_here
 
 ```
+Or directly update the `apiKeys.js` file inside `/app`.
 
-Or directly update the `apiKeys.js` file inside `/src`.
+4. **Start the development server**
+
+```bash
+
+npm run dev
+
+```
 
 ---
 
@@ -85,17 +85,59 @@ Or directly update the `apiKeys.js` file inside `/src`.
 ```
 
 <!-- cloud-high/
-├── public/
-│ └── images/
-│ └── background.jpg
-├── src/
-│ ├── components/
-│ ├── App.js
-│ ├── App.css
-│ ├── forcast.js
-│ ├── currentLocation.js
-│ └── apiKeys.js
-└── README.md -->
+src/
+│   ├── app/                # Next.js App Router directory
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── (routes)/           # Optional grouped routes
+│   │   │   ├── dashboard/
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   └── auth/
+│   │   │       ├── login/
+│   │   │       │   └── page.tsx
+│   │   │       └── register/
+│   │   │           └── page.tsx
+│   │   └── api/       # Route handlers (Next.js API routes)
+│   │       └── user/
+│   │           └── route.ts
+│   │
+│   ├── components/             # Reusable UI components
+│   │   ├── ui/
+│   │   │   ├── button.tsx
+│   │   │   ├── input.tsx
+│   │   │   └── modal.tsx
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Sidebar.tsx
+│   │   └── index.ts            # Barrel export
+│   │
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── useAuth.ts
+│   │   └── useTheme.ts
+│   │
+│   ├── lib/                    # Helper functions, utils, and configs
+│   │   ├── api.ts
+│   │   ├── constants.ts
+│   │   ├── utils.ts
+│   │   └── prisma.ts           # If using Prisma or DB connector
+│   │
+│   ├── store/                  # Zustand/Redux or Context files
+│   │   └── userStore.ts
+│   │
+│   ├── styles/                 # Tailwind globals / CSS modules
+│   │   ├── globals.css
+│   │   └── theme.css
+│   │
+│   └── types/                  # TypeScript types/interfaces
+│       └── index.d.ts
+│
+├── .eslintrc.json              # ESLint config
+├── next.config.mjs
+├── package.json
+├── README.md
+├── tsconfig.json
+└── LICENSE
 
 ```
 
