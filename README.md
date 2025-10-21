@@ -1,114 +1,36 @@
-# ☁️ Weather Application
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-A clean and responsive weather application built using **NextJS** that allows users to search for real-time weather data by city name. It fetches accurate weather information using the **OpenWeatherMap API** and displays it in a user-friendly interface with animated icons.
+## Getting Started
 
----
-## 🚀 Live Demo
-
-Check out the deployed app here: 
-
-## 🚀 Features
-
-- 🔍 Search for weather in any city
-
-- 🧭 Shows current location weather by default
-
-- 🌡️ Displays temperature, humidity, wind speed, and visibility
-
-- ⛅ Animated weather icons
-
-- 🖼️ Responsive background and UI
-
-- ⚡ Debounced search for performance
-
-
-
-
-## 🛠️ Technologies Used
-
-- **NextJS** – Frontend framework
-
-- **Axios** – For API requests
-
-- **React Animated Weather** – For weather icons
-
-- **OpenWeatherMap API** – For real-time weather data
-
----
-
-## 📦 Installation
-
-1. **Clone the repository**
+First, run the development server:
 
 ```bash
-
-git clone https://github.com/sahilsingh7735/weather-app-hacktoberfest2025.git
-cd weather-app-hacktoberfest2025
-
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-2. **Install dependencies**
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-npm install
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```
+## Learn More
 
-3. **Start the development server**
+To learn more about Next.js, take a look at the following resources:
 
-```bash
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-npm start
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🔑 Environment Setup
-
-Create a file called `.env` in the root directory and add your OpenWeatherMap API key:
-
-```env
-
-
-REACT_APP_WEATHER_API_KEY=your_api_key_here
-
-```
-
-Or directly update the `apiKeys.js` file inside `/src`.
-
----
-
-## 📁 Folder Structure
-
-```
-
-<!-- cloud-high/
-├── public/
-│ └── images/
-│ └── background.jpg
-├── src/
-│ ├── components/
-│ ├── App.js
-│ ├── App.css
-│ ├── forcast.js
-│ ├── currentLocation.js
-│ └── apiKeys.js
-└── README.md -->
-
-```
-
----
-## 🧑‍💻 Developer
-
-**Sahil Singh**
-
-- 🔗 LinkedIn: [Sahil Singh](https://www.linkedin.com/in/sahil-singh-a6462a131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-- 💼 GitHub: [@sahilsingh7735](https://github.com/sahilsingh7735)
-- 📧 Email: sahilsinghofficial77@gmail.com
-
-
-## 📝 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
